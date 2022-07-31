@@ -17,7 +17,7 @@
 .separador {
   height: 1px;
   width: 100%;
-  background-color: #f5f6f7;
+  background-color: #dfdede;
   border: 0;
 }
 
@@ -25,8 +25,8 @@
   height: 100%;
   width: 1px;
   border-width: 0;
-  color: #f5f6f7;
-  background-color: #f5f6f7;
+  color: #dfdede;
+  background-color: #dfdede;
 }
 
 .cabecalho-navegacao {
@@ -83,7 +83,7 @@ li:nth-child(9) a {
   color: #323333;
 }
 
-li:nth-child(9) a {
+li:nth-child(10) a {
   color: #a81d83;
 }
 
@@ -95,6 +95,7 @@ li:nth-child(9) a {
 a {
   transition: ease-in-out 0.5;
   text-decoration: none;
+  color: black;
 }
 
 a:hover {
@@ -210,12 +211,20 @@ a:hover {
   color: #ec8006;
 }
 
+.mobile {
+  display: none;
+}
+
+.conteudo-mobile {
+  display: none;
+}
+
 @media screen and (max-width: 1300px) {
   .principal {
     width: 90%;
   }
 
-  .noticias{
+  .noticias {
     justify-content: space-around;
   }
 
@@ -223,18 +232,17 @@ a:hover {
     display: none;
   }
 
-  .noticia-esquerda .separador{
+  .noticia-esquerda .separador {
     display: none;
   }
-
 }
 
 @media screen and (max-width: 1300px) {
-  .noticia-direita{
+  .noticia-direita {
     display: none;
   }
 
-  .noticia-esquerda{
+  .noticia-esquerda {
     width: 100%;
   }
 
@@ -244,29 +252,102 @@ a:hover {
 }
 
 @media screen and (max-width: 700px) {
-  .links{
+  .links {
     flex-wrap: wrap;
     justify-content: space-evenly;
   }
 
-  .links li{
-    margin-right: 4px;
+  .links li {
+    margin-right: 8px;
   }
 
-  .noticia-ilustrada{
+  .noticia-ilustrada {
     margin-bottom: 20px;
   }
 
-  .noticia-ilustrada{
+  .noticia-ilustrada {
     width: 100%;
   }
 
-  .noticia-nao-ilustrada{
+  .noticia-nao-ilustrada {
     width: 47%;
     margin: 0;
   }
 
-  .noticia-nao-ilustrada:nth-child(1){
+  .noticia-nao-ilustrada:nth-child(1) {
     display: none;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .links {
+    display: none;
+  }
+
+  .manchete {
+    display: none;
+    flex-direction: column;
+  }
+
+  .manchete-principal {
+    font-size: 32px;
+  }
+
+  .manchete-secundaria {
+    font-size: 18px;
+    color: #cd150b;
+    margin: 7px 0 5px 0;
+  }
+
+  .mobile {
+    display: flex;
+  }
+
+  .conteudo {
+    display: none;
+  }
+
+  .conteudo-mobile {
+    display: block;
+  }
+
+  .noticia-mobile{
+    margin: 20px 0 16px 0;
+  }
+
+  .noticia-ilustrada-mb {
+    display: flex;
+  }
+
+  .noticia--titulo-mb {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    color: #cd150b;
+  }
+
+  .noticia--imagem-mb {
+    width: 120px;
+    height: 67px;
+    margin-right: 8px;
+  }
+
+  .noticia--resumo-mb {
+    margin-top: 16px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #cd150b;
+  }
+
+  .verde div h1, .verde p, .verde div p{
+    color: #06AA48;
+  }
+
+  .laranja div h1, .laranja p, .laranja div p{
+    color: #FF8203;
+  }
+  .principal {
+    width: 95%;
   }
 }
